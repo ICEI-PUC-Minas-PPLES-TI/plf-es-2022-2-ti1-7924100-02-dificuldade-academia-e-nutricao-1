@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Contatos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/styles/style_suporte.css">
+    <link rel="stylesheet" href="../../assets/styles/style_nav.css">
+
+</head>
+
+<body onload="init()" id="body">
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+
+            </svg>
+        </button>
+        <div class="logo_header">
+            <a href="#"><img src="../../assets/images/logo.png" class="img_logo_header"></a>
+        </div>
+
+
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg></button>
+                <a href="../../index_lgn.html"> INÍCIO </a>
+                <a href="../../index_lgn.html#quem-somos"> QUEM SOMOS </a>
+                <a href="../../index_lgn.html#services"> SERVIÇOS </a>
+                <a href="../Suporte/Suporte.html"> SUPORTE </a>
+        </div>
+    </div>
+    <main tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+
+        <h1>Suporte</h1>
+        <div class="container">
+            <div class="row">
+                <div id="msg" class="col-sm-10 offset-sm-1 ">
+                
+                </div>
+            </div>
+           
+   
+            <form id="form-contato">
+                 <form id="form-contato">
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+    
+                            <label for="inputId">ID</label>
+                            <input type="text" class="form-control" id="inputId" disabled>
+                            <p></p>
+                            <form action="https://formsubmit.co/tiawacademia@gmail.com" method="POST">
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom01">Nome</label>
+                                        <input type="text" class="form-control" id="validationCustom01" placeholder="Ex: Rommeu"
+                                         required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom02">Sobrenome</label>
+                                        <input type="text" class="form-control" id="validationCustom02" placeholder="Ex: Carneiro"
+                                          required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">E-mail</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            </div>
+                                            <input type="email" class="form-control" id="validationCustomUsername" placeholder="Ex: rommeu@gmail.com" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress">Assunto</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="Exs: Feedback, Problemas, Ajuda" >
+                                </div>
+                                <p></p>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Como posso ajudá-lo?</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1"  placeholder="Ex: Como acesso aos vídeos de emagrecimento?" rows="6"></textarea>
+                                </div>
+                                <small>(*) Campos obrigatórios</small>
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <input type="button" class="btn btn-success" id="btnInsert" value="Enviar">
+                       
+                            <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+                            <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+                            <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar">
+                            <p></p>
+                            <a href="lista_contatos.html"><input type="button" class="btn btn-warning" id="btnClear"
+                                    value="Pesquisar Mensagens"></a>
+                        </div>
+                    </div>
+  </form>
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                        <table id="grid-contatos" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Sobrenome</th>
+                                    <th scope="col">E-mail</th>
+                                    <th scope="col">Assunto</th>
+                                    <th scope="col">Como posso ajudá-lo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-contatos">
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <footer class="rodape">
+                    <div class="txt">
+                        <p>Copyright © 2022 - <b>ConnectHealth</b></p>
+                    </div>
+                    <div class="logo">
+                        <label class="logo"><img src="../../assets/images/logo.png" alt="Logo" width="150px" height="auto"></label>
+                    </div>
+                </footer>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="../../assets/scripts/script_suporte.js"></script>
+        <script>
+            function exibeContatos() {
+
+                $("#table-contatos").html("");
+
+
+                for (i = 0; i < db.data.length; i++) {
+                    let contato = db.data[i];
+                    $("#table-contatos").append(`<tr><td scope="row">${contato.id}</td>
+                                                <td>${contato.nome}</td>
+                                                <td>${contato.telefone}</td>
+                                                <td>${contato.email}</td>
+                                                <td>${contato.cidade}</td>
+                                                <td>${contato.categoria}</td>
+                                            </tr>`);
+                }
+            }
+
+            function init() {
+                // Adiciona funções para tratar os eventos 
+                $("#btnInsert").click(function () {
+                    // Verfica se o formulário está preenchido corretamente
+                    if (!$('#form-contato')[0].checkValidity()) {
+                        displayMessage("Preencha o formulário corretamente.");
+                        return;
+                    }
+
+                    // Obtem os valores dos campos do formulário
+                    let campoNome = $("#validationCustom01").val();
+                    let campoTelefone = $("#validationCustom02").val();
+                    let campoEmail = $('#validationCustomUsername').val();
+                    let campoCidade = $("#inputAddress").val();
+                    let campoCategoria = $('#exampleFormControlTextarea1').val();
+                    let contato = {
+                        nome: campoNome,
+                        telefone: campoTelefone,
+                        email: campoEmail,
+                        cidade: campoCidade,
+                        categoria: campoCategoria
+                    };
+
+                    insertContato(contato);
+
+                    // Reexibe os contatos
+                    exibeContatos();
+
+                    // Limpa o formulario
+                    $("#form-contato")[0].reset();
+                });
+
+                // Intercepta o click do botão Alterar
+                $("#btnUpdate").click(function () {
+                    // Obtem os valores dos campos do formulário
+                    let campoId = $("#inputId").val();
+                    if (campoId == "") {
+                        displayMessage("Selecione uma mesangem para ser alterado.");
+                        return;
+                    }
+                    let campoNome = $("#validationCustom01").val();
+                    let campoTelefone = $("#validationCustom02").val();
+                    let campoEmail = $("#validationCustomUsername").val();
+                    let campoCidade = $("#inputAddress").val();
+                    let campoCategoria = $("#exampleFormControlTextarea1").val();
+                    let contato = {
+                        nome: campoNome,
+                        telefone: campoTelefone,
+                        email: campoEmail,
+                        cidade: campoCidade,
+                        categoria: campoCategoria
+                    };
+
+                    updateContato(parseInt(campoId), contato);
+
+                    // Reexibe os contatos
+                    exibeContatos();
+
+                    // Limpa o formulario
+                    $("#form-contato")[0].reset();
+                });
+
+   
+                $("#btnDelete").click(function () {
+                    let campoId = $("#inputId").val();
+                    if (campoId == "") {
+                        displayMessage("Selecione uma mensagem a ser excluída.");
+                        return;
+    
+                    }
+                    deleteContato(parseInt(campoId));
+
+                    // Reexibe os contatos
+                    exibeContatos();
+
+                    // Limpa o formulario
+                    $("#form-contato")[0].reset();
+                });
+
+                // Intercepta o click do botão Listar Contatos
+                $("#btnClear").click(function () {
+                    $("#form-contato")[0].reset();
+                });
+
+                // Oculta a mensagem de aviso após alguns segundos
+                $('#msg').bind("DOMSubtreeModified", function () {
+                    window.setTimeout(function () {
+                        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                            $(this).remove();
+                        });
+                    }, 5000);
+                });
+
+                // Preenche o formulário quando o usuario clicar em uma linha da tabela 
+                $("#grid-contatos").on("click", "tr", function (e) {
+                    let linhaContato = this;
+                    colunas = linhaContato.querySelectorAll("td");
+
+                    $("#inputId").val(colunas[0].innerText);
+                    $("#validationCustom01").val(colunas[1].innerText);
+                    $("#validationCustom02").val(colunas[2].innerText);
+                    $("#validationCustomUsername").val(colunas[3].innerText);
+                    $("#inputAddress").val(colunas[4].innerText);
+                    $("#exampleFormControlTextarea1").val(colunas[5].innerText);
+                });
+
+                exibeContatos();
+            }
+        </script>
+        <!-- Link Script NavBar -->
+        <script src="../../assets/scripts/navbar.js"></script>
+</body>
+
+</html>

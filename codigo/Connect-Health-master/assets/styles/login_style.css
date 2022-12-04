@@ -1,0 +1,66 @@
+body{
+  background-color: #151515;
+}
+.text-info{
+  color:white !important;
+  
+
+}
+button{
+  background-color: #b0d91e  !important; 
+  border-color:#151515!important; 
+}
+.btn-info{
+margin-left: 10px !important;
+}
+.btn-md{
+  background-color: #b0d91e;
+  border-color:#151515!important; 
+}
+.modal-body{
+  background-color: #343434;
+
+}
+.modal-header{
+  background-color: #343434;
+  color: white;
+}
+.modal-footer{
+  background-color: #343434;
+  color: white;
+}
+.text-info2{
+  color: white !important;
+
+}
+.text-center{
+  color: white !important;
+}
+.btn-md:hover{
+background-color: #151515 !important;
+color: #b0d91e;
+border: 2px solid #343434 !important;
+    }
+.btn-info:hover{
+  background-color: #151515 !important;
+color: #b0d91e;
+border: 2px solid #343434 !important;
+}
+.modal-ft{
+width: 1px !important;
+}
+.btn-secondary:hover{
+  background-color: #151515 !important;
+  color: #b0d91e;
+  border: 2px solid #343434 !important;
+}
+.btn-info:hover{
+  background-color: #151515 !important;
+  color: #b0d91e;
+  border: 2px solid #343434 !important;
+}
+.form-control{
+  background-color: #343434 !important;
+  color: white !important;
+  border-color:white!important; 
+}

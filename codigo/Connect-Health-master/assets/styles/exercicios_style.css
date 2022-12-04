@@ -1,0 +1,208 @@
+       
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+         
+:root{
+    --color-branco: #ffffff;
+    --color-verde: #b0d91e;
+    --color-cinza: #343434;
+    --color-preto: #151515;
+}
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+   font-family: 'Open Sans', sans-serif;  
+  color: var(--color-preto);
+  background-color: #151515;
+  color: #ffffff;
+}
+.img_logo_header{
+   width: 200px; 
+   margin-top: 8px;
+}
+.header, .navigation_header {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   
+}
+.header{
+   background-color: #151515;
+   
+   height: 5em;
+   justify-content: space-between;
+   padding: 0 9%;
+   
+   
+}
+.navigation_header{
+   gap: 2em;
+   z-index: 2;
+}
+.navigation_header a{
+   text-decoration: none;
+   color: #b0d91e;
+   transition: 0.7s;
+   font-weight: bold;
+}
+.navigation_header a:hover{
+   color: #ffffff;
+}
+.active{
+   background-color:#343434;
+   padding: 10px;
+   border-radius: 10px;
+}
+
+.btn_icon_header{
+   
+   background-color: transparent;
+   border: none;
+   color: #ffffff;
+   cursor: pointer;
+   display: none;
+}
+@media screen and (max-width: 768px) {
+
+   .navigation_header{
+      position: absolute;
+      flex-direction: column !important;
+      top: 0;
+      background-color: rgb(20, 20, 20);
+      height: 100%;
+      width: 35vw;
+      padding: 16px;
+      animation-duration: 1s;
+       margin-left: -100vw;
+       
+   }  
+    .btn_icon_header{
+       display: block;
+   }
+}
+@keyframes showSidebar {
+   from {margin-left: -100vw;}
+   to {margin-left: -10vw;}
+}
+main .content h4{
+    text-align: center;
+    font-size: 25px;
+    margin-top:40px;
+}
+main{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+
+}
+.container .card {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+}
+.container .card .content{
+    padding: 20px;
+    text-align: center;
+    transform: transLateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+    .container .card:hover .content{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+.container .card .content h2{
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255,255,255, 0.1);
+    pointer-events: none;
+
+}
+.container .card .content h3{
+    font-size: 1.8em;
+    color: #b0d91e;
+    z-index: 1;
+}
+.container .card .content p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+.container .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #b0d91e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba (0,0,0, 0,2);
+    
+}
+
+.dropdownshow{
+    margin-top: 200px;
+    
+   
+    
+}
+.dropdown-item{
+    background-color: #343434;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#dropdownMenuLink{
+    background: #b0d91e;
+    border: none;
+    color: black;
+    font-weight: bold;
+
+}
+.dropdown-menu{
+    background-color: #343434;
+}
+
+.rodape{
+    margin-left: 290px;
+    margin-bottom: auto;
+}
+.rodape img{
+    margin-left:55px;
+}
+@media (max-width: 480px) {
+    .rodape{
+        margin-left: 30px;
+    }
+}

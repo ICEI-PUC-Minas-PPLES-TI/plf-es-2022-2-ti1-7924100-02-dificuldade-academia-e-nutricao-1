@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/styles/style_editProfile.css">
+    <link rel="icon" href="../../assets/images/logo.png" sizes="16x32">
+    <title>Connect Health</title>
+
+
+</head>
+
+<body id="body">
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+
+            </svg>
+        </button>
+        <div class="logo_header">
+            <a href="#"><img src="../../assets/images/logo.png" class="img_logo_header"></a>
+        </div>
+
+
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg></button>
+                <a href="../../index_lgn.html"> INÍCIO </a>
+                <a href="../../index_lgn.html#quem-somos"> QUEM SOMOS </a>
+                <a href="../../index_lgn.html#services"> SERVIÇOS </a>
+                <a href="../Suporte/Suporte.html"> SUPORTE </a>
+        </div>
+    </div>
+    <main tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+        <!--PERFIL DO USUARIO-->
+        <div class="card">
+            <div class="perfil" id="perfil">
+                <div id="tela">
+                </div>
+            </div>
+        </div>
+
+        <!--FORMULARIO-->
+        <form class="container">
+            <div id="form-contato" class="form">
+                <h2>Alterar Informações Pessoais:</h2>
+                <div class="nome">
+                    <label class="title_placeholder" for="inputNome">Nome:</label>
+                    <input type="text" class="form-control" id="inputNome" placeholder="Digite seu nome" required>
+                </div>
+                <div class="aniversario">
+                    <label class="title_placeholder" for="inputAniversario">Aniversário:</label>
+                    <input type="date" class="form-control" id="inputAniversario" placeholder="00/00/0000" required>
+                </div>
+                <div class="email">
+                    <label class="title_placeholder" for="inputEmail">E-mail:</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="E-mail" required>
+                </div>
+                <div class="objetivo">
+                    <label class="title_placeholder" for="inputObjetivo">Objetivo:</label>
+                    <input type="search" list="objtv" class="form-control" id="inputObjetivo" placeholder="Objetivo"
+                        required>
+                    <datalist id="objtv" style="display:hidden;">
+                        <option value="Emagrecer">
+                        <option value="Manter Peso">
+                        <option value="Ganhar Massa">
+                    </datalist>
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" id="btnSalva" value="Salvar">
+                </div>
+            </div>
+        </form>
+        <!--FIM DO FORMULARIO-->
+
+
+        <footer class="rodape">
+            <div class="txt">
+                <p>Copyright © 2022 - <b>ConnectHealth</b></p>
+            </div>
+            <div class="logo">
+                <label class="logo"><img src="../../assets/images/logo.png" alt="Logo" width="150px" height="auto"></label>
+            </div>
+        </footer>
+    </main>
+
+
+
+    <!-- Link Script NavBar -->
+    <script src="../../assets/scripts/script_editProfile.js"></script>
+
+    <!-- Link Script Edit Profile -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="../../assets/scripts/edit_profile.js"></script>
+
+</body>
+
+</html>

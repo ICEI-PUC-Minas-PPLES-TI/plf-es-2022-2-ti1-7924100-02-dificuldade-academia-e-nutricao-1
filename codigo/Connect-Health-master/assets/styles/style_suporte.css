@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+         
+:root{
+    --color-branco: #ffffff;
+    --color-verde: #b0d91e;
+    --color-cinza: #343434;
+    --color-preto: #151515;
+}
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+   font-family: 'Open Sans', sans-serif;  
+  color: var(--color-preto);
+  background-color: #151515;
+  color: #ffffff;
+}
+.img_logo_header{
+   width: 200px; 
+   margin-top: 8px;
+}
+.header, .navigation_header {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   
+}
+.header{
+   background-color: #151515;
+   
+   height: 5em;
+   justify-content: space-between;
+   padding: 0 9%;
+   
+   
+}
+.navigation_header{
+   gap: 2em;
+   z-index: 2;
+}
+.navigation_header a{
+   text-decoration: none;
+   color: #b0d91e;
+   transition: 0.7s;
+   font-weight: bold;
+}
+.navigation_header a:hover{
+   color: #151515;
+}
+.active{
+   background-color:#151515;
+   padding: 10px;
+   border-radius: 10px;
+}
+.content{
+   text-align: center;
+   padding-top: 3em;
+   height:100vh;
+   transition: 1s;
+}
+
+::placeholder {
+    color: #343434 !important;
+    opacity: 3;
+}
+::-webkit-input-placeholder { 
+    color:  #343434 !important;
+}
+:-moz-placeholder { 
+    color:  #343434 !important;
+    opacity:  3;
+ }
+ h1 {
+     text-align: center;
+ }
+ #msg {
+     height: 60px;
+ }
+ #grid-contatos tbody {
+     cursor: pointer;
+ }
+
+
+ #validationCustom01{
+   background-color: #151515;
+   color: white;
+ }
+ #inputId{
+   background-color: #151515;
+   color: white;
+ }
+ #validationCustom02{
+   background-color: #151515;
+   color: white;
+ }
+ #validationCustomUsername{
+   background-color: #151515;
+   color: white;
+ }
+ #inputGroupPrepend{
+   background-color: #151515;
+   color: white;
+ }
+ #inputAddress{
+   background-color: #151515;
+   color: white;
+ }
+ #exampleFormControlTextarea1{
+   background-color: #151515;
+   color: white;
+   color: white;
+ }
+
+ #btnInsert{
+   background-color: #b0d91e;
+   color: #151515;
+   border-color: #b0d91e;
+ }
+ #btnUpdate{
+   background-color: #b0d91e;
+   color: #151515;
+   border-color: #b0d91e;
+ }
+ #btnClear{
+   background-color: #b0d91e;
+   color: #151515;
+   border-color: #b0d91e;
+ }
+ #btnInsert{
+   background-color: #b0d91e;
+   color: #151515;
+   border-color: #b0d91e;
+ }
+ #btnDelete{
+   background-color: #b0d91e;
+   color: #151515;
+   border-color: #b0d91e;
+ }
+ :-ms-input-placeholder {  
+   color: black;  
+} 
+#displayMessage{
+   background-color: #b0d91e;
+   color:black ;
+}
+#filtro_sobrenome{
+   background-color: #151515;
+   color: white;
+}
+#filtro_assunto{ background-color: #151515;
+   color: white;
+}

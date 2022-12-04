@@ -1,0 +1,104 @@
+ /*CSS DICAS ACADEMIA*/
+
+
+
+main.cards {
+    display: flex;
+    padding: 32px;
+    margin-left: 240px!important;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #343434;
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
+    background: linear-gradient(0deg, rgba(21, 21, 21, 1) 0%, rgb(41, 41, 41) 100%);
+    box-shadow: 0 0 20px black;
+         border-top: 2px solid rgba(255, 255, 255, 0.5);
+         border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+main.cards section.card:first-child {
+    margin-left: 0;
+}
+
+main.cards section.card img {
+    width: 100%;
+}
+
+main.cards section.card h3 {
+    font-size: 150%;
+    margin-top: 64px 64px ;
+    color: #b0d91e;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 100%;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+
+
+main.cards section.card.contact a {
+    background: linear-gradient(to right, #b0d91e, #b0d91e);
+}
+
+
+@media screen and (max-width: 720px) {
+    main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 100%;
+    }
+
+}
+
+
+.a {
+   background-color: #b0d91e;
+   border-radius: 100px;
+   border: none;
+   color: white;
+   padding: 15px 25px;
+   font-weight: 600;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+}
+
+.a:hover {
+   text-decoration: none;
+   background-color: white;
+   color: #b0d91e;
+   transition: .7s;
+}
+
+.rodape{
+    margin: 30px auto;;
+}
+
+
+
+
+

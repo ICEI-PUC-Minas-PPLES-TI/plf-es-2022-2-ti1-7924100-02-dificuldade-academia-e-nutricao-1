@@ -1,0 +1,309 @@
+      /*Style NAVBAR */
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+      :root {
+         --color-branco: #ffffff;
+         --color-verde: #b0d91e;
+         --color-cinza: #343434;
+         --color-preto: #151515;
+      }
+
+      * {
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         font-family: 'Open Sans', sans-serif;
+         color: var(--color-preto);
+         background-color: #151515;
+         color: #ffffff;
+      }
+
+      .img_logo_header {
+         width: 200px;
+         margin-top: 8px;
+      }
+
+      .header,
+      .navigation_header {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+
+      }
+
+      .header {
+         background-color: #151515;
+
+         height: 5em;
+         justify-content: space-between;
+         padding: 0 9%;
+
+
+      }
+
+      .navigation_header {
+         gap: 2em;
+         z-index: 2;
+      }
+
+      .navigation_header a {
+         text-decoration: none;
+         color: #b0d91e;
+         transition: 0.7s;
+         font-weight: bold;
+      }
+
+      .navigation_header a:hover {
+         color: #ffffff;
+      }
+
+      .active {
+         background-color: #343434;
+         padding: 10px;
+         border-radius: 10px;
+      }
+
+      .content {
+         text-align: center;
+         padding-top: 3em;
+         height: 100vh;
+         transition: 1s;
+      }
+
+      .btn_icon_header {
+
+         background-color: transparent;
+         border: none;
+         color: #ffffff;
+         cursor: pointer;
+         display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+
+         .navigation_header {
+            position: absolute;
+            flex-direction: column !important;
+            top: 0;
+            background-color: rgb(20, 20, 20);
+            height: 100%;
+            width: 35vw;
+            padding: 16px;
+            animation-duration: 1s;
+            margin-left: -100vw;
+
+         }
+
+         .btn_icon_header {
+            display: block;
+         }
+      }
+
+      @keyframes showSidebar {
+         from {
+            margin-left: -100vw;
+         }
+
+         to {
+            margin-left: -10vw;
+         }
+      }
+
+      .content .titulo h1 {
+         font-weight: 900;
+         padding: 15px;
+         font-size: 50px;
+      }
+
+      /* CSS CARDS */
+
+      .card {
+         box-shadow: 0 0 20px black;
+         border-top: 2px solid rgba(255, 255, 255, 0.5);
+         border-left: 2px solid rgba(255, 255, 255, 0.5);
+         width: 80%;
+         max-width: 800px;
+         display: none;
+         align-items: center;
+         background: rgb(21, 21, 21);
+         background: linear-gradient(0deg, rgba(21, 21, 21, 1) 0%, rgb(41, 41, 41) 100%);
+         color: white;
+         text-align: center;
+         padding: 20px;
+         margin: 20px auto;
+         border-radius: 10px;
+      }
+
+      .card img {
+         border-radius: 100%;
+         border: 4px solid #b0d91e;
+      }
+
+      .profile-name {
+         font-size: 32px;
+         font-weight: 800;
+      }
+
+      .profile-position {
+         margin: 15px;
+         opacity: 60%;
+      }
+
+      .conhecer_button {
+         background-color: #b0d91e;
+         border-radius: 100px;
+         border: none;
+         color: white;
+         padding: 15px 25px;
+         font-weight: 600;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+      }
+
+      .conhecer_button:hover {
+         text-decoration: none;
+         background-color: white;
+         color: #b0d91e;
+         transition: .7s;
+      }
+
+      .rodape {
+         padding: 30px;
+      }
+
+      /* BOTÃO CARREGAR MAIS */
+
+      .load-more {
+         border: none;
+         border-radius: 100px;
+         padding: 10px 30px;
+         background: white;
+         color: #b0d91e;
+         font-weight: bold;
+         text-decoration: none;
+
+      }
+
+      .load-more:hover {
+         background: #b0d91e;
+         color: white;
+         transition: .7s;
+         cursor: pointer;
+         text-decoration: none;
+      }
+
+      /* CSS para o JavaScript do VER MAIS */
+
+      .card:nth-child(2) {
+         display: block;
+      }
+
+
+
+
+      /*Loader*/
+
+      .loading {
+         content: '';
+         height: 32px;
+         width: 32px;
+         margin: 0 auto;
+         animation: loader1 3s linear infinite;
+      }
+
+      @keyframes loader1 {
+         from {
+            transform: rotate(0deg);
+         }
+
+         to {
+            transform: rotate(360deg);
+         }
+
+      }
+
+      .loading span {
+         display: flex;
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         width: 32px;
+         height: 32px;
+         clip: rect(16px, 32px, 32px, 0);
+         animation: loader2 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+      }
+
+      @keyframes loader2 {
+         from {
+            transform: rotate(0deg);
+         }
+
+         to {
+            transform: rotate(360deg);
+         }
+
+      }
+
+      .loading span::before {
+         content: '';
+         display: flex;
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         width: 32px;
+         height: 32px;
+         border: 3px solid transparent;
+         border-top: 3px solid var(--color-verde);
+         border-radius: 50%;
+         animation: loader3 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+      }
+
+      @keyframes loader3 {
+         from {
+            transform: rotate(0deg);
+         }
+
+         to {
+            transform: rotate(360deg);
+         }
+
+      }
+
+      .loading span::after {
+         content: '';
+         display: flex;
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         width: 32px;
+         height: 32px;
+         border: 3px solid var(--color-branco);
+         border-radius: 50%;
+      }
+
+      .load-more.show-loader {
+
+         display: none;
+      }
+
+      .load-more.show-loader .loading {
+         display: flex;
+      }
+
+      .load-more.loaded {
+         visibility: hidden;
+         opacity: 0;
+         height: 0;
+         transition: visibility .3s 3s, opacity .3s 3s, height .3s 3s, ;
+      }
